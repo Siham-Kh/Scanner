@@ -21,7 +21,8 @@ go run main.go <host> <port>
 
 - Replace <host> with the IP address of the target host and <port> with the MySQL port (typically 3306). Example: go run main.go localhost 3306
 
-
+4. Output will be printed to screen
+   
 ## Testing
 
 If you don't have a mysql instance running somewhere, create one below:
@@ -41,8 +42,9 @@ Compile the Go code before running it:
 
 go run main.go localhost 3306
 
+4. **Output will be printed to screen**
 
-4. **Stop and Remove the MySQL Docker Container**:
+5. **Stop and Remove the MySQL Docker Container**:
 
 After testing, stop and remove the MySQL Docker container using the following commands:
 
