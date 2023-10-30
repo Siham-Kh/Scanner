@@ -12,21 +12,23 @@ The MySQL Scanner is a Go-based utility for detecting and retrieving basic infor
 1. Clone the repository and navigate to the project directory.
 
 git clone <repository_url>
-cd mysql-scanner
+cd Scanner
 
 2. Build the scanner program.
 
 go build
 
 3. Run the scanner by providing the target host and port as command-line arguments.
-./mysql-scanner <host> <port>
+./main <host> <port>
 
 - The scanner will not remain in listening mode. It checks for the mysql server, if not connected a message "MySQL does not appear to be running on the specified host and port." will show!
 
-- Replace <host> with the IP address of the target host and <port> with the MySQL port (typically 3306). Example: ./mysql-scanner 127.0.0.1 3306
+- Replace <host> with the IP address of the target host and <port> with the MySQL port (typically 3306). Example: ./main localhost 3306
 
 
 ## Testing
+
+If you don't have a mysql instance running somewhere, create one below:
 
 1. **Start a MySQL Docker container**:
 You can use the following command to create a MySQL Docker container for testing:
@@ -39,7 +41,12 @@ This command creates a MySQL container with a root password "my-secret-pw" and m
 
 Compile the Go code before running it:
 
-3. **Stop and Remove the MySQL Docker Container**:
+3. **Run the scanner**:
+
+./main localhost 3306
+
+
+4. **Stop and Remove the MySQL Docker Container**:
 
 After testing, stop and remove the MySQL Docker container using the following commands:
 
