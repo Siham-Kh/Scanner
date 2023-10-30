@@ -45,7 +45,3 @@ After testing, stop and remove the MySQL Docker container using the following co
 
 docker stop mysql-test
 docker rm mysql-test
-
-
-<!-- Example output:
-![Alt text](image.png) -->
